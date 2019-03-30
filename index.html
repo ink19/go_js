@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Go</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <br>
+    <div class="container">
+        <div class="text-center">
+            <canvas id="go-board" width="720px" height="720px">
+
+            </canvas>
+        </div>
+        <hr>
+        <div class="row m-auto" style="width:720px;">
+            <div class="col-2">
+                <button type="button" class="btn btn-primary" id="set-black" onclick="set_black()">摆黑棋</button>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-primary" id="set-white" onclick="set_white()">摆白棋</button>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-primary" id="first-black" onclick="first_black()">黑棋先</button>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-primary" id="first-white" onclick="first_white()">白棋先</button>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-secondary" id="first-white" onclick="last_step()">后退一步</button>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-danger" id="clear-board" onclick="clear_board()">清空</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
