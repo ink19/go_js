@@ -12,6 +12,8 @@ var color_model = 2; //0摆白，1摆黑，2正常
 
 var _draw;
 
+var down_image;
+
 function judege_qi(x, y, board) {
     console.log(x, y);
     if(go_board[x][y] == -1) return 0;
@@ -255,8 +257,19 @@ function draw() {
         go_board[value[0]][value[1]] = value[2];
     });
 }
+
+down_image = function () {
+    var a = document.createElement("a");
+    a.href = canvas.toDataURL();
+
+    a.download = "go.png";
+    a.click();
+}
+
+
 _draw = draw;
 bgi.onload = draw;
+bgi.setAttribute("crossOrigin",'Anonymous')
 bgi.src = "bgi.jpg";
 
 canvas.addEventListener("click", function(event) {
