@@ -139,6 +139,7 @@ function switch_color() {
 
 function last_step() {
     now_step--;
+    switch_color();
     var go_data_length = go_data.length;
     var go_temp_data = go_data.slice(0, go_data_length - 1);
     go_data = [];
